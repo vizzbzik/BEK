@@ -10,7 +10,7 @@
 ## Локальный запуск
 ```bash
 pip install -r requirements.txt
-set DATABASE_URL=postgresql+asyncpg://postgres:postgres@127.0.0.1:5432/cryptodb
+set DATABASE_URL=postgresql://whome_user:w5O1SxiKRCIA9C4Coj0QDDmwSGd8oGBO@dpg-d2i2qlu3jp1c738v2f90-a/whome
 set SECRET_KEY=dev-secret
 uvicorn app.main:app --reload
 ```
