@@ -7,3 +7,4 @@ asyncpg
 passlib[bcrypt]
 python-multipart
 starlette
+itsdangerous
