@@ -4,7 +4,7 @@
 Полноценное веб‑приложение: регистрация, вход, баланс, переводы, история переводов.
 
 ## Переменные окружения
-- `DATABASE_URL` — строка подключения к PostgreSQL (Render): `postgresql+asyncpg://USER:PASSWORD@HOST:5432/DB?sslmode=require`
+- `DATABASE_URL` — строка подключения к PostgreSQL (Render): `postgresql://whome_user:w5O1SxiKRCIA9C4Coj0QDDmwSGd8oGBO@dpg-d2i2qlu3jp1c738v2f90-a/whome`
 - `SECRET_KEY` — любая длинная случайная строка
 
 ## Локальный запуск
