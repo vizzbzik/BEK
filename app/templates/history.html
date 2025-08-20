@@ -1,0 +1,29 @@
+
+{% extends "base.html" %}
+{% block content %}
+  <div class="bg-white rounded-lg shadow p-6">
+    <h2 class="text-xl font-semibold mb-4">История переводов</h2>
+    <div class="overflow-x-auto">
+      <table class="min-w-full text-sm">
+        <thead><tr class="border-b">
+          <th class="text-left py-2 px-2">Дата</th>
+          <th class="text-left py-2 px-2">Отправитель</th>
+          <th class="text-left py-2 px-2">Получатель</th>
+          <th class="text-right py-2 px-2">Сумма</th>
+        </tr></thead>
+        <tbody>
+          {% for t in txs %}
+            <tr class="border-b hover:bg-slate-50">
+              <td class="py-2 px-2">{{ t.created_at.strftime("%Y-%m-%d %H:%M") }}</td>
+              <td class="py-2 px-2">{{ t.from_wallet.address if t.from_wallet else "-" }}</td>
+              <td class="py-2 px-2">{{ t.to_wallet.address if t.to_wallet else "-" }}</td>
+              <td class="py-2 px-2 text-right">{{ '%.6f'|format(t.amount) }}</td>
+            </tr>
+          {% else %}
+            <tr><td class="py-4 px-2 text-slate-500" colspan="4">Пока нет операций</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}
