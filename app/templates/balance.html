@@ -1,0 +1,17 @@
+
+{% extends "base.html" %}
+{% block content %}
+  <div class="bg-white rounded-lg shadow p-6">
+    <h2 class="text-xl font-semibold mb-2">Баланс</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="p-4 border rounded">
+        <div class="text-sm text-slate-500">Адрес кошелька</div>
+        <div class="font-mono break-all">{{ wallet.address }}</div>
+      </div>
+      <div class="p-4 border rounded">
+        <div class="text-sm text-slate-500">Текущий баланс</div>
+        <div class="text-2xl font-bold">{{ '%.6f'|format(wallet.balance) }} BEK</div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
