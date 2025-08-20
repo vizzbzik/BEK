@@ -1,0 +1,29 @@
+
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BEK Crypto</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <nav class="bg-white shadow-sm">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="/" class="font-bold text-lg">BEK</a>
+      <div class="space-x-4">
+        <a href="/balance" class="hover:underline">Баланс</a>
+        <a href="/transfer" class="hover:underline">Переводы</a>
+        <a href="/history" class="hover:underline">История</a>
+        <a href="/login" class="hover:underline">Вход</a>
+        <a href="/register" class="hover:underline">Регистрация</a>
+        <a href="/logout" class="hover:underline">Выход</a>
+      </div>
+    </div>
+  </nav>
+  <main class="max-w-5xl mx-auto px-4 py-6">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>
