@@ -1,0 +1,9 @@
+
+fastapi
+uvicorn[standard]
+jinja2
+sqlalchemy[asyncio]
+asyncpg
+passlib[bcrypt]
+python-multipart
+starlette
