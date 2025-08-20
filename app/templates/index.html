@@ -1,0 +1,20 @@
+
+{% extends "base.html" %}
+{% block content %}
+  <section class="bg-white rounded-lg shadow p-6">
+    <h1 class="text-2xl font-semibold mb-2">Добро пожаловать в BEK Crypto</h1>
+    <p class="text-slate-600 mb-4">Зарегистрируйтесь, получите адрес кошелька и переводите BEK другим пользователям.</p>
+    {% if address %}
+      <div class="p-4 rounded border mb-2">
+        <div class="text-sm text-slate-500">Ваш адрес кошелька</div>
+        <div class="font-mono break-all">{{ address }}</div>
+      </div>
+      <div class="p-4 rounded border">
+        <div class="text-sm text-slate-500">Ваш баланс</div>
+        <div class="text-xl font-semibold">{{ '%.6f'|format(balance or 0) }} BEK</div>
+      </div>
+    {% else %}
+      <a href="/register" class="inline-block bg-slate-900 text-white px-4 py-2 rounded">Создать аккаунт</a>
+    {% endif %}
+  </section>
+{% endblock %}
